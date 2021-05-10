@@ -1,0 +1,125 @@
+Abstraction
+Polymorphism
+Encapsulation
+Interface
+Object Methods
+Abstraction is achieved through abstract classes and interfaces
+   abstract classes
+   interfaces
+-----------------------------------------------------------------------
+How objects communicate each other?
+Ans: objects communicate with each other by messaging and messaging
+means calling the methods.
+--------------------------------------------------------------
+Java Beans convention to define a class.
+
+1) The class should have constructor.
+2) The class for every attribute should have a pair of methods.
+   set =====> for storing or setting the data
+   get =====> accessing or reading the data
+------------------------------------------------------------------------
+ 
+   public class Student   {
+    private int roll;
+    private String name;
+
+// Constructors are having the same name as that of the class name
+// In our case as the class name is Student , constructor is also
+// named as Student
+// Constructors are basically a method.   
+// Constructors are used to initialise objects.
+// Constructors don'thave any return type not even void    
+// Constructors are of two type , one is default constructor
+   ( The constructor which is provided when we dont write our own 
+    constructor and it won't be having any parameters.We can write this
+    parameterless constructor in our code , then the constructor which
+    is defined by us will be called)
+// We can have parameterized constructor also.
+// A single class can have both parameterless and parameterized constructor
+
+    public void displayData()
+    {
+       System.out.println(roll);
+       System.out.println(name);
+    }
+
+  }
+   
+How we write setter and getter method? and what can be the challenge faced if the parameter name 
+and the member variables names are same?
+
+   package com.cts.demos.settergetter1;
+  public class Employee  {
+        private int id;
+        private String name;
+       
+        public void setId(int id)
+          {
+              id=id;
+          }
+        public int getId() {
+         
+             return id;
+         } 
+ 
+        public void setName(String name)
+         {
+          name=name;
+         }
+
+        public String getName(){
+          
+              return name;
+          }            
+    
+    }    
+    
+--------------------------------------------------------------------------------------------------------------
+To avoid the incorrect code we have two options:=
+ 1) Either you keep the parameter and the member variable names different 
+ 2) use of this keyword. ( this represents the current object )
+============================================================================================================
+Polymorhism-------> Poly means many 
+morph==========> body structure
+In Java Polymorhism is achived through 
+1) Method overloading
+2) Method overriding
+( Overloading and overriding are related with methods only)
+----------------------------------------------------------------------------------------------------
+Method overloading:-
+   1) Method signature ( method name and the parameters)
+   2) method overloading related methods can be within a single class or it can be within the base class and
+     the subclass.
+   3) method name will be same .
+   4) The number of parameters will be different.
+   5) The datatype will be different.
+   6) Return type can be same or different. Based on return type , we don't decide method overloading.
+----------------------------------------------------------------------------------------------
+ Method overriding:-
+1) Is seen in Inheritance.
+2) The method names , return type , the number of parameters and the data type of parameters will be the same.
+3) The base class method is overridden by the derived class method.
+---------------------------------------------------------------------------------------------------------- 
+Abstract class will have atleast one abstract method. 
+What is abstract method?
+A method without a body is called abstract method.
+We cannot create an object of abstract class. 
+Because there are some of the methods with body and some of the methods without body.
+--------------------------------------------------------------------------------------------------------
+Interfaces prior to version 1.8, all the methods were abstract but from 1.8 interfaces can have
+another two types of methods
+* default methods ( will have body)
+* static methods   ( will have body)
+* apart from abstract ( won't have body)
+-------------------------------------------------------------------------------------------------------------
+
+public class Base {
+   public void display(){}
+  }
+
+public class Derived {
+   public void display() {}
+  }
+The above is not method overriding because no parent child relationship between the classes.
+-----------------------------------------------------------------------------------------------------------
+
